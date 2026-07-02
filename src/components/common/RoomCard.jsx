@@ -20,6 +20,8 @@ const RoomCard = ({ room }) => {
         <img 
           src={room.images[0] || "/img/default-room.jpg"} 
           alt={room.type} 
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
         />
         {/* شارة الفئة (Category Tag) */}

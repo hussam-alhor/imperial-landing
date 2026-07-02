@@ -11,10 +11,14 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="relative py-20 px-6 overflow-hidden">
-      {/* الصورة كخلفية */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed" 
-        style={{ backgroundImage: "url('/img/hotel-interior-blur.png')" }} 
+      {/* الصورة تُحمّل لاحقاً لأنها ليست ضرورية للظهور الفوري */}
+      <img
+        src="/img/hotel-interior-blur.png"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       
       {/* طبقة تظليل (Overlay) - مهم جداً للقراءة */}

@@ -17,14 +17,14 @@ const ParallaxSection = ({ children, imageUrl, overlayColor = "bg-primary/85", s
   return (
     <section ref={ref} className="relative py-32 px-6 overflow-hidden min-h-[60vh] flex items-center justify-center">
       {/* طبقة الصورة المتحركة (Parallax Image) */}
-      <motion.div 
-        className="absolute inset-0 z-0 scale-110" // scale-110 لتعويض حركة الـ Parallax
-        style={{ 
-          backgroundImage: `url(${imageUrl})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          y // تطبيق حركة الـ transform هنا
-        }}
+      <motion.img
+        src={imageUrl}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 z-0 w-full h-full object-cover scale-110"
+        style={{ y }}
       />
       
       {/* طبقة التظليل (Overlay) لضمان قراءة النصوص */}

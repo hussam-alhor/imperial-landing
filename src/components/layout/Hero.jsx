@@ -5,10 +5,15 @@ const Hero = () => {
   return (
     
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* الصورة كخلفية كاملة */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/img/hero.png')" }}
+      {/* الصورة الأساسية تُحمّل فوراً لأن القسم ظاهر مباشرة */}
+      <img
+        src="/img/hero.png"
+        alt=""
+        aria-hidden="true"
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       
       {/* طبقة تظليل لزيادة تباين النص */}
