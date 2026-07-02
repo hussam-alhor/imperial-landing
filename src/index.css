@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@theme {
+  /* هنا نضع الهوية البصرية التي أرسلتها */
+  --color-primary: #6B1F2B;
+  --color-secondary-btn: #C8A24A;
+  --color-secondary-hover: #B08F3F;
+  --color-secondary-background: #F6F1E8;
+  --color-secondary-text: #2A2A2A;
+  --color-secondary-light: #E3C77A;
+  --color-active-bg: #6B1F2B;
+  --color-active-text: #FFFFFF;
+  --color-hover-bg: #F6F1E8;
+  --color-hover-text: #6B1F2B;
+}
+
+/* إضافة تنسيق عام بسيط ليناسب هوية الفندق */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-secondary-background);
+  color: var(--color-secondary-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
